@@ -1,0 +1,7 @@
+# eclipse project file
+/.settings/
+/bin/
+/target/
+/junit/
+/.classpath
+*.log
