@@ -14,6 +14,6 @@ public class UpperBounderWildcard {
 	
 	public static void main(String[] args) {
 		List<? extends Number> list = new ArrayList<Integer>();
-		list.add(new Integer(5));
+//		list.add(new Integer(5));
 	}
 }
