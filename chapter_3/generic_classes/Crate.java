@@ -6,6 +6,10 @@ public class Crate<T> {
 		return contents;
 	}
 	
+	public static <V> V greet(V t) {
+		return t;
+	}
+	
 	public void packCrate(T contents) {
 		this.contents = contents;
 	}
