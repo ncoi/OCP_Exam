@@ -25,7 +25,7 @@ public class QueueMethods {
 		ArrayDeque<Integer> deque = new ArrayDeque<>();
 		deque.push(10);                      // 10
 		deque.push(4);                       // 4
-		System.out.println(deque.peek());    // 10
+		System.out.println(deque.peek());    // 4
 		System.out.println(deque);           // [4,10]
 		System.out.println(deque.peek());    // 4
 		System.out.println(deque.poll());    // 4
