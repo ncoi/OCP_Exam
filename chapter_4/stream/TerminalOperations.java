@@ -3,6 +3,7 @@ package stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -67,5 +68,15 @@ public class TerminalOperations {
 		BinaryOperator<Integer> oper = (a, b) -> a * b;
 		Stream<Integer> stre = Stream.of(3,5,6);
 		System.out.println(stre.reduce(1, oper, oper)); // 90
+		
+		//collect()
+		System.out.println("collect():");
+		Stream<String> col = Stream.of("w","o","l","f");
+		StringBuilder cword = col.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
+		System.out.println(cword);
+		
+		Stream<String> setStream = Stream.of("w","o","l","f");
+		TreeSet<String> set = setStream.collect(TreeSet::new, TreeSet::add, TreeSet::addAll);
+		System.out.println(set);
 	}
 }
