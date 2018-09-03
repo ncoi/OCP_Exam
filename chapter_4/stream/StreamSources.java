@@ -7,8 +7,9 @@ import java.util.stream.Stream;
 public class StreamSources {
 	public static void main(String[] args) {
 		Stream<String> empty = Stream.empty();         // count = 0
-		Stream<Integer> singleElement = Stream.of(1);  // count = 1
+		Stream<Integer> singleElement = Stream.of();  // count = 0
 		Stream<Integer> fromArray = Stream.of(1,2,3);  // count = 3
+		System.out.println(singleElement.count());
 		
 		// convert from a list to a stream
 		List<String> list = Arrays.asList("a","b","c");
