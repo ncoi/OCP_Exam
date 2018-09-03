@@ -69,14 +69,6 @@ public class TerminalOperations {
 		Stream<Integer> stre = Stream.of(3,5,6);
 		System.out.println(stre.reduce(1, oper, oper)); // 90
 		
-		//collect()
-		System.out.println("collect():");
-		Stream<String> col = Stream.of("w","o","l","f");
-		StringBuilder cword = col.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
-		System.out.println(cword);
-		
-		Stream<String> setStream = Stream.of("w","o","l","f");
-		TreeSet<String> set = setStream.collect(TreeSet::new, TreeSet::add, TreeSet::addAll);
-		System.out.println(set);
+	
 	}
 }
