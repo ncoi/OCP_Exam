@@ -8,7 +8,7 @@ import java.util.List;
 public class UnderstandingGenericSupertypes {
 	public static void main(String[] args) {
 		// Puede ser: IOException, Exception u Object
-		List<? super IOException> exceptions = new ArrayList<Exception>();
+		List<? super IOException> exceptions = new ArrayList<IOException>();
 		
 		exceptions.add(new IOException());
 		// Exception e = new IOException();
@@ -27,5 +27,6 @@ public class UnderstandingGenericSupertypes {
 		
 		// Exception e = new FileNotFoundException();
 		// IOException e = FileNotFoundException();
+
 	}
 }

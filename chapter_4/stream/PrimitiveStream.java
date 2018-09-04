@@ -1,5 +1,8 @@
 package stream;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
@@ -39,6 +42,11 @@ public class PrimitiveStream {
 		
 		IntStream rngClosed = IntStream.rangeClosed(1, 5);
 		rngClosed.forEach(System.out::println);
+		
+		
+		List<Integer> intList = Arrays.asList(14,02,63,74,35);
+		IntStream i = intList.stream().flatMapToInt(x -> IntStream.of(x));
+		i.forEach(System.out::println);
 	}
 
 }

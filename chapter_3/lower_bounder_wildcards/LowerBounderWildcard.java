@@ -17,7 +17,7 @@ public class LowerBounderWildcard {
 	public static void main(String[] args) {
 		List<String> strings = new ArrayList<String>();
 		strings.add("tweet");
-		
+				
 		List<Object> objects = new ArrayList<Object>(strings);
 		
 		List<Serializable> serial = new ArrayList<Serializable>();
