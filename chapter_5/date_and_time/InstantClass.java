@@ -9,8 +9,11 @@ public class InstantClass {
 		Instant now = Instant.now();
 		Instant later = Instant.now();
 		
+		System.out.println("Now: " + now);       // 2018-09-19T01:04:58.537Z
+		
 		Duration duration = Duration.between(now, later);
-		System.out.println(duration.toMillis());
+		System.out.println(duration);              // PTOS
+		System.out.println(duration.toMillis());   // 0
 		
 		// Turn a ZonedDateTime into an Instant
 		LocalDate date = LocalDate.of(2015, 5, 25);
@@ -32,9 +35,9 @@ public class InstantClass {
 		// Add unit day or smaller to an Instant
 		Instant nextDay = instant.plus(1, ChronoUnit.DAYS);
 		System.out.println(nextDay);
-		Instant nextHour = instant.plus(1, ChronoUnit.HOURS);
+		Instant nextHour = instant.plus(1, ChronoUnit.MILLIS);
 		System.out.println(nextHour);
-//		Instant nextWeek = instant.plus(1, ChronoUnit.WEEKS);     exception
+//		Instant nextWeek = instant.plus(1, ChronoUnit.WEEKS); //    exception at runtime
 		
 		
 	}

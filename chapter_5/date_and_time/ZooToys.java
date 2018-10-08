@@ -18,7 +18,7 @@ public class ZooToys {
 		Period everyOtherDay = Period.ofDays(2);          // every 2 days
 		Period everyYearAndAWeek = Period.of(1, 0, 7);    // every year and 7 days
 		
-		System.out.println(everyYearAndAWeek);
+		System.out.println(everyOtherDay);
 	}
 	
 	public static void performAnimalEnrichment(LocalDate start, LocalDate end, Period period) {

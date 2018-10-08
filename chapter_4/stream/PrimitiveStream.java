@@ -17,6 +17,8 @@ public class PrimitiveStream {
 		
 		IntStream intStream = IntStream.of(1,2,3,4,5);
 		OptionalDouble avg = intStream.average();
+//		int suma = intStream.sum();
+//		System.out.println(suma);  // YA SE OPERO, NO SE PUEDE USAR EL STREAM
 		System.out.println(avg.getAsDouble()); // 3.0
 		
 		// Creating a Primitive Stream

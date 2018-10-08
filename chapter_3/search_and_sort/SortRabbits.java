@@ -19,7 +19,8 @@ public class SortRabbits {
 		
 		List<String> names = Arrays.asList("Fluffy", "Bugs", "Hoppy");
 		Comparator<String> c1 = Comparator.reverseOrder();
-		int index = Collections.binarySearch(names, "Hoppy", c1);
+		Collections.sort(names);
+		int index = Collections.binarySearch(names, "Carlos");
 		System.out.println(index);
 		
 		Set<Rabbit> set = new TreeSet<>(new Comparator<Rabbit>() {

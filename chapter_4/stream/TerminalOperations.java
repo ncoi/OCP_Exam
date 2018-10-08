@@ -17,8 +17,8 @@ public class TerminalOperations {
 		System.out.println(s1.count());
 		
 		// min() max()
-		Stream<String> s2 = Stream.of("xbd","ape","vcd");
-		Optional<String> min = s2.min((x, y) -> x.length() - y.length());
+		Stream<String> s2 = Stream.of("aa","aaa","aaaa");
+		Optional<String> min = s2.max((x, y) -> x.length() - y.length());
 		min.ifPresent(System.out::println);
 		
 		Optional<?> minEmpty = Stream.empty().min((x, y) -> 0);
@@ -69,6 +69,5 @@ public class TerminalOperations {
 		Stream<Integer> stre = Stream.of(3,5,6);
 		System.out.println(stre.reduce(1, oper, oper)); // 90
 		
-	
 	}
 }

@@ -5,29 +5,29 @@ import java.util.Locale;
 public class LocaleClass {
 
 	public static void main(String[] args) {
-		Locale locale = Locale.getDefault();
-		System.out.println(locale);
-
-		// Constants of some of the most commonly used locales
-		System.out.println(Locale.GERMAN);
-		System.out.println(Locale.GERMANY);
+		Locale local = Locale.getDefault();
+		System.out.println(local);            // en_US
 		
-		// Constructors
-		System.out.println(new Locale("fr"));
-		System.out.println(new Locale("hi", "IN"));
+		Locale ger = Locale.GERMAN;
+		Locale gerLang = Locale.GERMANY;
+		System.out.println("Lang: " + ger);                   // de
+		System.out.println("Lang and Country: " + gerLang);   // de_DE
 		
-		// Builder design pattern
-		Locale l1 = new Locale.Builder().setLanguage("en").setRegion("US").build();
-		System.out.println(l1);
+		Locale french = new Locale("fr");
+		Locale india = new Locale("hi","IN");
+		System.out.println("French: " + french);              // fr
+		System.out.println("India: " + india);                // hi_IN	
 		
-		// Legal, but don't do this
-		Locale l2 = new Locale.Builder().setLanguage("EN").setRegion("us").build();
-		System.out.println(l2);             // en_US
+		// Java let's you create a Locale with an invalid value
+		Locale invalid = new Locale("popo"); 
+		System.out.println(invalid);
 		
-		// Change default 
-		Locale locale1 = new Locale("fr");
-		Locale.setDefault(locale1);
-		System.out.println(Locale.getDefault());
+		Locale america = new Locale.Builder()
+				.setRegion("US")
+				.setLanguage("en")
+				.build();
+		
+		System.out.println(america);
 	}
 
 }

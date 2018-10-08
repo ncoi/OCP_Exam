@@ -11,9 +11,9 @@ public class ChronoUnitClass {
 		LocalDateTime date1 = LocalDateTime.of(2016, 1, 20, 6, 20);
 		LocalDateTime date2 = LocalDateTime.of(2018, 5, 18, 5, 6);
 		
-		System.out.println(ChronoUnit.HOURS.between(one, two));
-		System.out.println(ChronoUnit.MINUTES.between(one, two));
-		System.out.println(ChronoUnit.HOURS.between(date1, date2));
+		System.out.println(ChronoUnit.HOURS.between(one, two));            // 1
+		System.out.println(ChronoUnit.MINUTES.between(one, two));          // 75
+		System.out.println(ChronoUnit.HOURS.between(date1, date2));        // 20374
 		
 		
 		LocalDate date = LocalDate.of(2015, 1, 20);

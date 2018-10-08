@@ -28,6 +28,10 @@ public class ManipualtingDates {
 		System.out.println(dt1);           // 2020-01-18T19:14:30
 		
 		dt1 = dt1.minusDays(1).minusHours(10).minusSeconds(30);
+		
+		LocalDate ld = LocalDate.of(2018, 9, 18);
+		ld = ld.minusWeeks(1);
+		System.out.println(ld.toEpochDay());
 	}
 
 }

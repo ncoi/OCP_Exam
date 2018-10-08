@@ -10,6 +10,7 @@ public class StringRecap {
 		System.out.println(s.indexOf("de"));                   // 3
 		System.out.println(s.substring(2,4).toUpperCase());    // CD
 		System.out.println(s.replace('a', '1'));               // 1bcde
+		System.out.println(s.replace("ab", "AB"));             // ABcde
  		System.out.println(s.contains("DE"));                  // false
 		System.out.println(s.startsWith("a"));                 // true
 	}

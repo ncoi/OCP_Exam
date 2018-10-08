@@ -8,21 +8,22 @@ import java.util.Locale;
 public class ParseStringToNumber {
 
 	public static void main(String[] args) throws ParseException {
-		// Parsin String to number
-		NumberFormat en = NumberFormat.getInstance();
+		NumberFormat en = NumberFormat.getInstance(Locale.US);
 		NumberFormat fr = NumberFormat.getInstance(Locale.FRANCE);
+		NumberFormat de = NumberFormat.getCurrencyInstance(Locale.US);
+		
 		String s = "40.45";
-		System.out.println(en.parse(s));
-		System.out.println(fr.parse(s));
+		System.out.println(en.parse(s)); // 40.45
+		System.out.println(fr.parse(s)); // 40
+		System.out.println(de.parse("$1,200"));
 		
-		String a = "x85.3";
-//		System.out.println(en.parse(a));             // Unparseable number: "x85.3"
-		
-		// Parsing String to currency
-		String amt = "$92,807.99";
-		NumberFormat cf = NumberFormat.getCurrencyInstance();
-		double value = (double)cf.parse(amt);          // parse returns a Number object
-		System.out.println(value);
+		NumberFormat nf = NumberFormat.getInstance();
+		String one = "456abc";
+		String two = "-2.5165x10";
+		String three = "x85.3";
+		System.out.println(nf.parse(one)); // 456
+		System.out.println(nf.parse(two)); // -2.5165
+		System.out.println(nf.parse(three));// throws ParseException
 	}
 
 }

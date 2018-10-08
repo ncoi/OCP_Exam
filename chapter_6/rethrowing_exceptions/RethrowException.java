@@ -1,15 +1,15 @@
 package rethrowing_exceptions;
 
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.time.format.DateTimeParseException;
 
 public class RethrowException {
-
-	public static void main(String[] args) throws SQLException {
-		multiCatch();
+	public void parseData() throws SQLException, ParseException, DateTimeParseException {
+		
 	}
 	
-	public static void multiCatch( ) throws SQLException, DateTimeParseException {
+	public void multiCatch() throws SQLException, ParseException {
 		try {
 			parseData();
 		} catch(Exception e) {
@@ -18,8 +18,7 @@ public class RethrowException {
 		}
 	}
 	
-	public static void parseData() throws SQLException, DateTimeParseException {
-		throw new SQLException();
+	public static void main(String[] args) {
+		
 	}
-
 }
